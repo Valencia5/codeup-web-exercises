@@ -26,3 +26,4 @@ var notExpired = true;
 var premiumMember = true;
 var productOffer = moreThanTwo && notExpired || premiumMember
 alert ("You are eligible for product offer!");
+//changes
