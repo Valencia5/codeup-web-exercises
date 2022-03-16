@@ -117,7 +117,7 @@ var totalTipNumber= Number(totalTipPercentage);
 //var totalTipWholeNumber = totalTipNumber/100;//10/100=10
 var feedBackForUser = calculateTip(totalBillNumber,totalTipNumber); //100/10=10
 console.log(feedBackForUser);
-alert("The total amount that should be tipped is " + "$" +feedBackForUser);
+alert("The total amount that should be tipped is " + "$" +feedBackForUser.toFixed(2));
 
 /**
  * TODO:
