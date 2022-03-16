@@ -27,3 +27,16 @@ var notExpired = true;
 var premiumMember = true;
 var productOffer = moreThanTwo && notExpired || premiumMember
 alert ("You are eligible for product offer!");
+
+//class name function assignment
+function  myNameAge(){
+    console.log ("Moses Valencia " + "35");
+}
+myNameAge()
+
+function doMath(){
+  //code lives here
+    return 4 + 8 * 5;
+};
+//running the math
+console.log(doMath();
