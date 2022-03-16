@@ -144,4 +144,4 @@ var totalSavings = .5;
 function applyDiscount(price,discount ){
    return fullPrice * totalSavings
 }
-console.log("$" + applyDiscount());
+console.log("$" + applyDiscount() + ".00");
