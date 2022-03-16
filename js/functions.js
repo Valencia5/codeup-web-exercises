@@ -56,10 +56,10 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-//Make a fucntion called isTwo
-//give the function a paramater
+//Make a function called isTwo
+//give the function a parameter
 //return a boolean value on weather or not the number = 2
-//call the function and pss the var of random in argurment
+//call the function and pss the var of random in argument
 //console.log it
 //
 function isTwo(number){
