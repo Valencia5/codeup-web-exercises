@@ -119,7 +119,7 @@ var feedBackForUser = calculateTip(totalBillNumber,totalTipNumber); //100/10=10
 console.log(feedBackForUser);
 alert("The total amount that should be tipped is " + "$" +feedBackForUser.toFixed(2));
 
-/**
+/**git sts
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
  * (before a discount is applied), and a discount percentage (a number between 0
