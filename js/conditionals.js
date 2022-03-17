@@ -26,18 +26,18 @@
     //3. return a statement related to the color
     //4. else, return a string stating those colors are not there
 
-// function analyzeColor(colorName){
-//     var result;
-//     if (colorName == "red"){
-//         result="Roses are red";
-//     }else if (colorName == "green"){
-//         result="Cash is green$$$"=
-//     }else{
-//         result= "IDK that color"
-//     }
-//     return result;
-// }
-// console.log(analyzeColor("green"))
+function analyzeColor(colorName){
+    var result;
+    if (colorName == "red"){
+        result="Roses are red";
+    }else if (colorName == "green"){
+        result="Cash is green$$$"=
+    }else{
+        result= "IDK that color"
+    }
+    return result;
+}
+console.log(analyzeColor("green"))
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -90,7 +90,7 @@ console.log(analyzeColor("red"));
 //2. use input in analyzeColor function
 //3. create alert to toeel the user the input from teh function
 
-var userInput = prompt('What color are you thinking of?')
+// var userInput = prompt('What color are you thinking of?')
 console.log(userInput)
 alert(analyzeColor(userInput))
 /* ########################################################################## */
@@ -114,16 +114,28 @@ alert(analyzeColor(userInput))
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-//create a variable for a lucky number between 0-5
-//create a conditional that goes through all the lucky number possibilities within the function
+// create a variable for a lucky number between 0-5
+// create a conditional that goes through all the lucky number possibilities within the function
 // write a function called calculateTotal
 // creat two paramters that are luckyNumber and totalAmount
-//
-function calculateTotal(luckyNumber, totalAmount){
-    if (luckyNumber=1){
 
+var total = prompt("what is the total amount?")
+function calculateTotal(luckyNumber, totalAmount){
+    if (luckyNumber===1){
+        return  (totalAmount-(totalAmount *.1))
+    } else if (luckyNumber===2){
+       return (totalAmount (totalAmount*.25))
+    } else if (luckyNumber ===3) {
+        return (totalAmount (totalAmount *.35))
+    } else if (luckyNumber ===4) {
+        return (totalAmount (totalAmount *.5))
+    } else if (luckyNumber===5){
+        return (totalAmount)
+    }else{
+        return totalAmount
     }
 }
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -132,8 +144,13 @@ function calculateTotal(luckyNumber, totalAmount){
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
-// Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+// //Generate a random number between 0 and 6
+var luckyNumber = Math.floor(Math.random() * 6);
+console.log(calculateTotal(luckyNumber,total))
+// var finalPrice = calculateTotal(luckyNumber,total)
+// alert("Your lucky number is " + luckyNumber);
+// alert("your original price was " + "$" + total)
+// alert("your final price is " + "$" +finalPrice)
 
 /**
  * TODO:
@@ -153,3 +170,44 @@ function calculateTotal(luckyNumber, totalAmount){
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+//create a confirm asking if they would like to enter a number
+//if ok, prompt the user to enter a number
+// create a function telling the user if the number is even or odd
+//alert the user the result of the function
+//creat a function that takes the user input and adds 100 is
+// create an alert tellling the result of the function
+// create a function that takes the user input and tell if the number is negitive or positive.
+//create an alert that returns weather the input was negitive or positive
+
+var enterNumber= confirm("would you like to enter a number?");
+
+if (enterNumber===true){
+    var userInputNumber= Number(prompt("please enter the number:"))
+} else{
+    console.log("user chose not to enter a number")
+}
+
+function evenOdd(userInput){
+    if (userInput % 2 ===1){
+        return alert("The number you chose is odd")
+    } else if (userInput % 2 ===0){
+        return alert("The number you chose was even")
+    } else {
+        return alert("The input is invalid")
+    }
+}
+console.log(evenOdd(userInputNumber))
+
+function plusHund(userInput, nubToAdd){
+return userInput + nubToAdd
+}
+alert("The Number you chose plus one hundred is equal to " + plusHund(userInputNumber,100))
+
+function negPos(input){
+    if (input < 0){
+        return alert( "The number you chose is a negative number!!!")
+    }else if (input > 0){
+        return alert ("The number you have chosen is positive!!!")
+    }else{ alert("The input is invalid")}
+}
+console.log(negPos(userInputNumber))
