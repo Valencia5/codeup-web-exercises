@@ -211,3 +211,4 @@ function negPos(input){
     }else{ alert("The input is invalid")}
 }
 console.log(negPos(userInputNumber))
+//done
