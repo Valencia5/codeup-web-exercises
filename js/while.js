@@ -18,17 +18,16 @@ while (i <= 65536) {
 
 
 
-
-var allCones = Math.floor(Math.random() * 50) + 50
-var  conesSold=Math.floor(Math.random() * 5) + 1;
+var amtToSell=Math.floor(Math.random() * 50) + 50;
+var amtBought;
 
 do{
-    console.log(conesSold + " cones sold")
-}while (allCones >= conesSold);
-
-
-
-
+    amtBought=Math.floor(Math.random() * 5) + 1;
+    amtToSell-=amtBought;
+    console.log(amtBought + " cones sold");
+}while (amtToSell> amtBought);
+console.log("amtToSell after the loop: ", amtToSell)
+console.log("amtBought: " + amtBought);
 
 // }
 // Miltiplacatin table
