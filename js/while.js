@@ -43,3 +43,16 @@ if (amtToSell > 0) {
 //     }
 //     console.log("----------------");
 // }
+
+
+
+
+var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// var shuffledArray = array.sort((a, b) => 0.5 - Math.random());
+
+console.log()
+
+function mixed(input){
+   return input.sort((a, b) => 0.5 - Math.random());
+}
+console.log(mixed(array))
