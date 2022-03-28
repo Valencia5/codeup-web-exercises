@@ -45,6 +45,3 @@
     console.log(planets);
     console.log(planets.sort());
 })();
-
-//here is a push to
-//git hub
