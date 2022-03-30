@@ -120,6 +120,7 @@
             firstName: "Berry",
             lastName: "Domes"
             }}
+
     ]
 
     console.log(books)
@@ -170,8 +171,30 @@
              *   outputs the information described above. Refactor your loop to use your
              *   `showBookInfo` function.
              */
-    function createBook(a, b){
-        return a
+    // function createBook(bookName, authorFirst, authorLast){
+    //     return books.title= bookName, books.firstName = authorFirst, books.lastName =authorLast
+    //         }
+    // books.createBook = function (bookName, authorFirst, authorLast) {
+    //     // return books.title= bookName, books.firstName = authorFirst, books.lastName =authorLast;
+    //     return books["title"] = "bookName"
+    // };
+    var book = {"Nomes"}
+    console.log(typeof book)
 
-            }
+
+    // console.log(books)
+    // console.log(books.length)
+
+    // function Book(type, author) {
+    //     this.type = type;
+    //     this.author = author;
+    //     this.getDetails = function () {
+    //         return this.type + " written by " + this.author;
+    //     }
+    // }
+    //
+    // var book = new Book("Fiction", "Peter King");
+    //
+    // console.log(book.getDetails());        // => Fiction written by Peter King
+
 })();
