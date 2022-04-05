@@ -56,3 +56,26 @@ function mixed(input){
    return input.sort((a, b) => 0.5 - Math.random());
 }
 console.log(mixed(array))
+
+var library = [
+    {
+        author: 'Bill Gates',
+        title: 'The Road Ahead',
+        readingStatus: true
+    },
+    {
+        author: 'Steve Jobs',
+        title: 'Walter Isaacson',
+        readingStatus: true
+    },
+    {
+        author: 'Suzanne Collins',
+        title:  'Mockingjay: The Final Book of The Hunger Games',
+        readingStatus: false
+    }];
+library.forEach(function(book){
+    console.log( "The book author is of " + book.author )
+    console.log( "The book title is " + book.title )
+    console.log( "The book reading status is " + book.readingStatus )
+})
+
