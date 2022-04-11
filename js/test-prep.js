@@ -261,7 +261,7 @@ function squareRoot(n){
 }
 // TODO: 10* create a function that will return how many whitespace characters are at the beginning of a string
 //  (hint: use regex).
-function whiteSpace(string){
+function whiteSpace(string) {
     //return how many spaces are at the beginning of string
     var count = 0;
     for (var i = 0; i < string.length; i++) {
@@ -270,7 +270,7 @@ function whiteSpace(string){
         }
     }
     return count;
-
+}
 // TODO: 11. Write a function named invertSign(number) that returns a negative version of a postive number, a positve
 //  version of negative, and false for all else.
 //
@@ -281,3 +281,19 @@ function whiteSpace(string){
 // //   return a random quote.
 //
 // TODO: 13. Write a function named firstTenFibonacciNumbers() that returns an array of the first ten fibonacci numbers
+
+// Write the code necessary to output the first 50 prime numbers
+// Recommend starting your loop at 1 and ending your loop once you've calcualted 50 primes.
+// https://en.wikipedia.org/wiki/Prime_number
+
+for(let number=2 ; number<=229; number++){
+    let isPrime = true;
+
+    for (let i=2; i<= number-1;i++){
+        if(number%i===0){
+            isPrime = false;
+            break
+        }
+    }
+    if (isPrime) console.log(number);
+}
