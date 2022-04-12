@@ -16,6 +16,12 @@ body, html {
     padding: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+.top-nav {
+    background: var(--light-bg);
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+}
 header {
     background-image: url("https://picsum.photos/1200/300");
     background-size: cover;
@@ -26,18 +32,11 @@ a {
     color: var(--link-color);
 }
 
-.nav-item{
+.nav-item {
     display: inline-block;
     padding: 1.5em;
 }
 
-.top-nav {
-    background: var(--light-bg);
-    width: 100%;
-    z-index: 1000;
-    position: fixed;
-
-}
 .nav {
     list-style-type: none;
     padding: 0;
@@ -54,12 +53,45 @@ a {
 .profile {
     background: var(--light-bg);
     height: 80px;
+    position: relative;
 }
-.profile-image {
-    position: absolute;
-    top: 225px;
 
+.profile-image {
+    top: -50%;
+    position: absolute;
 }
+
+.profile-form {
+    line-height: 80px;
+}
+
+.profile-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile-entry {
+    margin: .5em;
+}
+
+.profile-details {
+    float: left;
+    width: calc(25% - 1em);
+    margin: 0 0.5em;
+}
+
+.timeline {
+    float: left;
+    width: calc(50% - 1em);
+    margin: 0 0.5em;
+}
+
+.who-to-follow {
+    float: left;
+    width: calc(25% - 1em);
+    margin: 0 0.5em;
+}
+
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
@@ -81,4 +113,26 @@ a {
 }
 .text-muted {
     color: var(--main-link-color);
+}
+
+.container {
+    margin-top: 24px;
+}
+
+.media-body {
+    float: left;
+    width: calc(100% - 50px);
+}
+.media-image {
+    max-width: 50px;
+    float: left;
+    margin-top: 18px;
+}
+.media {
+    width: 100%;
+
+    background-color: var(--light-bg);
+    padding: 6px;
+    border-bottom: solid 1px var(--separator-color);
+    overflow: hidden;
 }
