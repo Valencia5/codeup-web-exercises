@@ -1,0 +1,214 @@
+!doctype html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pizza World</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+<div class="container">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Pizza World</a>
+        <a class="navbar-text" href="#">Order Online</a>
+        <a class="navbar-text" href="#">Menu</a>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Zip Code">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you!</button>
+        </form>
+        <div></div>
+        <a class="navbar-text" href="#"><i class="far fa-meh"></i> Sign In</a>
+    </nav>
+
+    <div class="jumbotron welcome-to-pizza-world">
+        <h1 class="display-4">Welcome to Pizza World!</h1>
+    </div>
+</div>
+    <!--TABS/TABLE for PIZZA SELECTOR-->
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-link active" id="nav-size-tab" data-toggle="tab" href="#nav-size" role="tab" aria-controls="nav-size" aria-selected="true"><span class="badge badge-secondary">1</span> Size and Crust</a>
+            <a class="nav-link" id="nav-cheese-tab" data-toggle="tab" href="#nav-cheese" role="tab" aria-controls="nav-cheese" aria-selected="false"><span class="badge badge-secondary">2</span> Cheese and Sauce</a>
+            <a class="nav-link" id="nav-toppings-tab" data-toggle="tab" href="#nav-toppings" role="tab" aria-controls="nav-toppings" aria-selected="false"><span class="badge badge-secondary">3</span> Toppings</a>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-size" role="tabpanel" aria-labelledby="nav-size-tab">
+
+            <div class="card">
+                <div class="card-header size-and-crust-card bg-primary text-white">
+                    Choose size and crust
+                </div>
+                <div class="card-body">
+                    <div class="card">
+                        <div class="card-header">Hand Tossed</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item card-header">Garlic seasoned crust with a rich, buttery taste.</li>
+                            <li class="list-group-item card-section-radio-button"><input type="radio" name="size-crust" id="size-crust" value="handtossed_small"> Small (10")</li>
+                            <li class="list-group-item card-section-radio-button"><input type="radio" name="size-crust" id="size-crust" value="handtossed_medium"> Medium (12")</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="card">
+                        <div class="card-header">Thin Crust</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item card-section-title">Thin enough for optimum crispy to crunchy ratio.</li>
+                            <li class="list-group-item"><input type="radio" name="size-crust" id="size-crust" value="thin_medium"> Medium (12")</li>
+                            <li class="list-group-item"><input type="radio" name="size-crust" id="size-crust" value="thin_large"> Large (14")</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-footer size-footer">
+                    <a id="to-nav-cheese" data-toggle="tab" href="#nav-cheese" role="tab" aria-controls="nav-cheese" aria-selected="true" class="card-link btn btn-primary">Next Step</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane fade" id="nav-cheese" role="tabpanel" aria-labelledby="nav-cheese-tab">
+
+            <div class="card">
+                <div class="card-header size-and-crust-card bg-primary text-white">
+                    Choose cheese and sauce
+                </div>
+                <div class="card-body">
+                    <div class="card">
+                        <div class="card-header">Cheese</div>
+                        <div class="card-body">How much?
+                            <select class="custom-select" id="cheeseSelect">
+                                <option selected>Choose...</option>
+                                <option value="cheese-light">Light</option>
+                                <option value="cheese-regular">Regular</option>
+                                <option value="cheese-heavy">Heavy</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card">
+                        <div class="card-header">Sauce</div>
+                        <div class="card-body">What type?
+                            <select class="custom-select" id="sauceSelect">
+                                <option selected>Choose...</option>
+                                <option value="sauce-robust">Robust Inspired Tomato Sauce</option>
+                            </select>
+                        </div>
+                        <div class="card-body">How much?
+                            <select class="custom-select" id="sauceSelect">
+                                <option selected>Choose...</option>
+                                <option value="sauceAmount-light">Light</option>
+                                <option value="sauceAmount-regular">Regular</option>
+                                <option value="sauceAmount-extra">Extra</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer size-footer">
+                    <a id="" data-toggle="tab" href="#" aria-controls="nav-cheese" class="card-link btn btn-primary">Previous Step</a>
+                    <a id="" data-toggle="tab" href="#" aria-controls="nav-cheese" class="card-link btn btn-primary">Next Step</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane fade" id="nav-toppings" role="tabpanel" aria-labelledby="nav-toppings-tab">
+
+            <div class="card">
+                <div class="card-header size-and-crust-card bg-primary text-white">
+                    Choose toppings
+                </div>
+                <div class="card-body">
+                    <div class="card">
+                        <div class="card-header">Choose Meats</div>
+                        <div class="card-body">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Text input with checkbox">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Text input with checkbox">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Text input with checkbox">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Text input with checkbox">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card">
+                        <div class="card-header">Choose Non-Meats</div>
+                        <div class="card-body">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Text input with checkbox">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Text input with checkbox">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Text input with checkbox">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" aria-label="Checkbox for following text input">
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Text input with checkbox">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer size-footer">
+                    <a id="nav-cheese-tab" data-toggle="tab" href="#nav-cheese" role="tab" aria-controls="nav-cheese" class="card-link btn btn-primary">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer>
+    <div style="height: 5em"></div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/72af5d8dfa.js" crossorigin="anonymous"></script>
+
+<!-- Your custom JS goes here -->
+</body>
