@@ -297,3 +297,68 @@ for(let number=2 ; number<=229; number++){
     }
     if (isPrime) console.log(number);
 }
+
+// Write a function that takes an object as argument
+// Swap the Javascript object's key with its values and return the resulting object
+
+// example input: {z:'a',y:'b',x:'c',w:'d'}
+// expected output: {a:'z',b:'y',c:'x',d:'w'}
+// -------------------------
+//     example input:{2:'a',4:'b',6:'c',8:'d'}
+// expected output: {a:'2',b:'4',c:'6',d:'8'}
+
+//TODO: swap values and keys in an object.
+function swapKey(obj) {
+    var swiched = Object.entries(obj).map(
+        ([key, value]) =>[value, key]);
+    return Object.fromEntries(swiched);
+}
+
+
+// TODO: Write a function that takes an array of objects and a string as arguments
+// Add a property with key 'continent' and value equal to the string to each of the objects
+// Return the new array of objects
+// Tipp: try not to mutate the original array
+
+example input: [{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }], 'Asia'
+expected output: [{ city: 'Tokyo', country: 'Japan', continent: 'Asia' }, { city: 'Bangkok', country: 'Thailand', continent: 'Asia' }]
+
+var myArr=[{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }]
+
+var contObj = {
+    continent: "Asia"
+}
+function addCont(obj, cont) {
+    myArr[0,1].continent="Asia"
+}
+
+
+
+// TODO: Write a function that takes an array (a) as argument
+// Extract the first 3 elements of a
+// Return the resulting array
+var arrayOne = [1, 2, 3, 4, 5, 6, 7];
+
+function extract (a) {
+   return a.slice(0-2)
+}
+
+extract(arrayOne)
+
+//TODO: Write an object that describes which brands own which cereals (you can be creative here) . After the object has been declared …
+// A) add properties and values to the existing object
+// B) re-assign 2 properties’ values
+
+var myCereal = {
+
+}
+//adding key/value pairs
+myCereal.Kellogs= "Shredded Wheat";
+myCereal.Post="Honey Bunches of Oats"
+myCereal.Ghost= "Protein Cereal"
+
+//changing values
+myCereal.Kellogs="Coco Crunch"
+myCereal.Post= "Banana Crunch"
+
+console.log(myCereal);
