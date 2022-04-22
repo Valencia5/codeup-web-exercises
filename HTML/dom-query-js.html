@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1 id="main-header">Hello World!</h1>
+<h1 id="main-header">Hello World!</h1> <button type="button" id="button-one"> Header Button!</button>
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -14,7 +14,9 @@
     <li data-dbid="4">Item 4</li>
     <li data-dbid="5">Item 5</li>
 </ul>
-<h2 id="sub-header">Hello Again.</h2>
+<button type="button" id="button-two"> Plain Button!</button>
+<h2 id="sub-header">Hello Again.<button type="button" id="button-three"> Sub-Header Button!</button></h2>
+
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -23,7 +25,9 @@
     reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
+
 </p>
+<button type="button" id="button-four"> Paragraph Button!</button>
 
 <script>
     (function() {
@@ -70,8 +74,74 @@
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         subParagraphs[0].innerText = "Mission Accomplished!!!!"
 
+        //click/alert event
+        var listenerOne= function (event) {
+            alert ("You clicked the header button!!!")
+        }
+        document.getElementById("button-one").addEventListener('click', listenerOne);
 
+        //change btn background click event
+        var listenerTwo = function (event) {
+           return document.getElementById("button-two").style.backgroundColor= "green";
+
+        }
+        document.getElementById("button-two").addEventListener('click', listenerTwo);
+
+////switch background btw red and blue colors with click event
+
+        var buttonThree = document.getElementById("button-three");
+
+        buttonThree.addEventListener("click", function() {
+            const curColour = document.body.style.backgroundColor;
+
+            if (curColour === 'green') {
+                document.body.style.backgroundColor = "yellow";
+            }
+            else {
+                document.body.style.backgroundColor = "green";
+            }
+        });
+
+        //switch button colors on click event
+        var buttonFour = document.getElementById("button-four");
+
+        buttonFour.addEventListener("click", function() {
+            const btColour = document.getElementById("button-four").style.backgroundColor;
+
+            if (btColour === 'blue') {
+                document.getElementById("button-four").style.backgroundColor = "red";
+            }
+            else {
+                document.getElementById("button-four").style.backgroundColor = "blue";
+            }
+        });
+
+
+//         var listenerThree = function (event) {
+//             return document.getElementsByClassName("body").backgroundColor= "green";
+//
+//         }
+//         document.getElementById("button-three").addEventListener('click', listenerThree);
+
+    //     var changeBg = document.getElementById("button-three");
+    //     changeBg.addEventListener( "click", function () {
+    //
+    //     var bodyColorChange = document.getElementsByTagName("body")[0];
+    //     console.log(bodyColorChange);
+    //
+    //     document. getElementsByTagName("body") [0].style
+    //         .backgroundColorColor= "yellow"
+    // } )
+
+        // var secButt = document.getElementById("button-two");
+        // console.log(secButt)
+        //
+        // secButt.addEventListener('click',function() {
+        //     secButt.style.backgroundcolor= "green";
+        // })
     })();
+
+
 </script>
 </body>
 </html>
