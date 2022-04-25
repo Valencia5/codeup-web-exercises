@@ -362,3 +362,12 @@ myCereal.Kellogs="Coco Crunch"
 myCereal.Post= "Banana Crunch"
 
 console.log(myCereal);
+
+// TODO: Write a function that takes an array of numbers
+//  as argument and returns the number of negative values in the array
+
+function makPos(arry) {
+    return arry = arry.map( s => Math.abs(s));
+}
+
+console.log(makPos([1, -2, 2, -4]));
