@@ -26,13 +26,27 @@ console.log("hello World");
 // $('p').css('font-size', '14px');
 
 // Todo: Element Selectors
-$("li").css('font-size', '20px')
+// $("li").css('font-size', '20px')
+//
+// $("h1, p, li").css("background-color", "yellow")
+//
+// var alertH1 = $("h1").html();
+// alert( alertH1)
 
-$("h1, p, li").css("background-color", "yellow")
+// Todo: Mouse Events
+$("h1").click(function() {
+    $(this).css("background-color", "red").css('color', 'white')
+});
 
-var alertH1 = $("h1").html();
-alert( alertH1)
+$("p").dblclick(function () {
+    $('p').css("font-size","18px").css('font-weight', 'bolder').css('text-decoration', 'underline')
+});
 
+$('li').hover(function () {
+    $(this).css('background-color', 'red').css('color', 'black')
+},
+    function () {
+    $(this).css('background-color', 'black').css('color','white').css('font-size', '50px')
 
-
+    });
 
