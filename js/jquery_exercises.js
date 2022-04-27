@@ -3,6 +3,36 @@ console.log("hello World");
 
 //TODO: Add an alert to tell you the DOM has finished loading. Check for expected results.
 
-$(document).ready( function (){
-    alert( " The DOM has finished loading!!!")
-})
+// $(document).ready( function (){
+//     alert( " The DOM has finished loading!!!")
+// })
+
+//Todo: ID selectors
+
+// var fortWorth = $('#hometown').html();
+//     alert(fortWorth);
+
+// //more than one ID with the same name will cause only the first ID to run.
+// var worstCity = $('#worst').html();
+// alert(worstCity);
+//
+// var fav= $('#loveThisPlace').html();
+// alert(fav)
+
+
+// Todo: Class Selectors
+
+// $('.codeUp').css('border','1px solid red');
+// $('p').css('font-size', '14px');
+
+// Todo: Element Selectors
+$("li").css('font-size', '20px')
+
+$("h1, p, li").css("background-color", "yellow")
+
+var alertH1 = $("h1").html();
+alert( alertH1)
+
+
+
+
