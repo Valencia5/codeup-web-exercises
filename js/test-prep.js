@@ -364,10 +364,97 @@ myCereal.Post= "Banana Crunch"
 console.log(myCereal);
 
 // TODO: Write a function that takes an array of numbers
-//  as argument and returns the number of negative values in the array
+//  as argument and returns the number of negative, possitive, and zero values in the array
 
-function makPos(arry) {
-    return arry = arry.map( s => Math.abs(s));
+// function makPos(arry) {
+//     return arry = arry.map( s => Math.abs(s));
+// }
+//
+// console.log(makPos([1, -2, 2, -4]));
+
+function counter(ar)  {
+    var num,array1=[0,0,0];
+    for (i=0;i<ar.length;i++)    {
+        switch (ar[i]<0)      {
+            case true : array1[0]++;break;
+            case false :
+                if (ar[i]=0) array1[1]++;
+                else array1[2]++;
+                break;
+            default : break;
+        }
+    }
+    return(array1);
+}
+console.log(counter([1, -2, 2, -4]));
+
+
+
+
+/use best practices by labeling your constants.
+let MS_PER_SEC = 1000
+    , SEC_PER_HR = 60 * 60
+    , HR_PER_DAY = 24
+    , MS_PER_DAY = MS_PER_SEC * SEC_PER_HR * HR_PER_DAY
+;
+
+//let's assume we get Date objects as arguments, otherwise return 0.
+function dateDiffInDays(date1, date2) {
+    if (!date1 || !date2) {
+        return 0;
+    }
+    return Math.round((date2.getTime() - date1.getTime()) / MS_PER_DAY);
 }
 
-console.log(makPos([1, -2, 2, -4]));
+// new Date("dateString") is browser-dependent and discouraged, so we'll write
+// a simple parse function for U.S. date format. (by @Miles)
+function parseDate(str) {
+    if (str && str.length > 7 && str.length < 11) {
+        let mdy = str.split('/');
+        return new Date(mdy[2], mdy[0]-1, mdy[1]);
+    }
+    return null;
+}
+
+
+
+//TODO: Write a function that takes two date instances as argument
+// It should return the number of days, hours,minutes, seconds that lies between those dates
+
+example input: new Date('2020-06-11'), new Date('2020-06-01')
+expected output: 10
+function timeDifference(date1, date2) {
+    var oneDay = 24 * 60 * 60; // hours*minutes*seconds
+    var oneHour = 60 * 60; // minutes*seconds
+    var oneMinute = 60; // 60 seconds
+    var firstDate = date1.getTime(); // convert to milliseconds
+    var secondDate = date2.getTime(); // convert to milliseconds
+    var seconds = Math.round(Math.abs(firstDate - secondDate) / 1000); //calculate the diffrence in seconds
+    // the difference object
+    var difference = {
+        "days": 0,
+        "hours": 0,
+        "minutes": 0,
+        "seconds": 0,
+    }
+    //calculate all the days and substract it from the total
+    while (seconds >= oneDay) {
+        difference.days++;
+        seconds -= oneDay;
+    }
+    //calculate all the remaining hours then substract it from the total
+    while (seconds >= oneHour) {
+        difference.hours++;
+        seconds -= oneHour;
+    }
+    //calculate all the remaining minutes then substract it from the total
+    while (seconds >= oneMinute) {
+        difference.minutes++;
+        seconds -= oneMinute;
+    }
+    //the remaining seconds :
+    difference.seconds = seconds;
+    //return the difference object
+    return difference;
+}
+console.log(timeDifference(new Date(2017,0,1,0,0,0),new Date()));
