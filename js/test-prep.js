@@ -458,3 +458,20 @@ function timeDifference(date1, date2) {
     return difference;
 }
 console.log(timeDifference(new Date(2017,0,1,0,0,0),new Date()));
+
+
+//TODO: Write a function that takes an array (a) and a value (n) as arguments
+// Save every nth element in a new array
+// Return the new array
+var newArr= []
+var oldArr=[1,2,3,4,5,6,7,8,9,10]
+function every(a, n){
+    for(let i = 0; i < a.length; i += n){
+        newArr.push(a[i]);
+    }
+    }
+every(oldArr, 3)
+console.log(newArr)
+
+// Todo: Complete the method/function so that it converts dash/underscore delimited words into camel casing.
+//     The first word within the output should be capitalized only if the original word was capitalized
