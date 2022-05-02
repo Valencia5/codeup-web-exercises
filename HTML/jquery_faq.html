@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery_faq</title>
+</head>
+<style>
+.invisible {
+    visibility: hidden;
+}
+
+.highlighter {
+    background-color: yellow;
+}
+</style>
+<body>
+<dl>
+    <dt>Dunes National Park</dt>
+    <dd id="fact1">Is located on the Oregon Coast</dd>
+</dl>
+<dl>
+    <dt>SeaLion caves National Park</dt>
+    <dd id="fact2">Is the largest gathering of sealions in the world.</dd>
+</dl>
+<dl>
+    <dt>Yellowstone National Park</dt>
+    <dd id="fact3"> is the oldest U.S. national park</dd>
+</dl>
+<dl>
+    <dt>Mackinac National Park</dt>
+    <dd id="fact4">was established in 1875</dd>
+</dl>
+<dl>
+    <dt> Yosemite National Pa</dt>
+    <dd id="fact5">Three of the 10 highest waterfalls in the world</dd>
+</dl>
+<dl>
+    <dt> Death Valley National Park</dt>
+    <dd id="fact6">One of the hottest temperatures on earth was recorded in 1913</dd>
+</dl>
+<dl>
+    <dt> Grand Canyon National Park</dt>
+    <dd id="fact7">is known as one of the Seven Natural Wonders of the World</dd>
+</dl>
+<dl>
+    <dt>Sequoia National Park </dt>
+    <dd id="fact8">is home to the largest living single-stem tree in the world</dd>
+</dl>
+<dl>
+    <dt>Hot Springs National Park in Arkansas</dt>
+    <dd id="fact9">Is the smallest national park</dd>
+</dl>
+<dl>
+    <dt>Great Smoky Mountains National Park</dt>
+    <dd id="fact10">is the most visited national park with more than 9 million guests per year</dd>
+</dl>
+
+<button id=fact-button type="button">See Facts</button>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    //Add a class to all dd elements named invisible
+    //Create some CSS rules that sets elements with the invisible class to visibility: hidden;.
+    //Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.
+    //When any of the dt elements is clicked, the element that was clicked should be highlighted.
+    $('dd').addClass("invisible")
+
+
+  $("#fact-button").click(function () {
+        $('dd').toggleClass('invisible');
+    });
+
+    $("#fact1").click(function(){
+        $('#fact1').toggleClass('highlighter')
+    });
+
+    $("#fact2").click(function(){
+        $('#fact2').toggleClass('highlighter')
+    });
+
+    $("#fact3").click(function(){
+        $('#fact3').toggleClass('highlighter')
+    });
+
+    $("#fact4").click(function(){
+        $('#fact4').toggleClass('highlighter')
+    });
+
+    $("#fact5").click(function(){
+        $('#fact5').toggleClass('highlighter')
+    });
+
+    $("#fact6").click(function(){
+        $('#fact6').toggleClass('highlighter')
+    });
+
+    $("#fact7").click(function(){
+        $('#fact7').toggleClass('highlighter')
+    });
+
+    $("#fact8").click(function(){
+        $('#fact8').toggleClass('highlighter')
+    });
+
+    $("#fact9").click(function(){
+        $('#fact9').toggleClass('highlighter')
+    });
+
+    $("#fact10").click(function(){
+        $('#fact10').toggleClass('highlighter')
+    });
+
+
+
+
+
+
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
+
+</body>
+</html>
