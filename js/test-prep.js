@@ -473,5 +473,32 @@ function every(a, n){
 every(oldArr, 3)
 console.log(newArr)
 
+
+
+//Todo Write a function that takes a array (a) as argument
+// Remove the first 3 characters of a
+// Return the result
+var myArr= [1,2,3,4,5,6,7]
+function splitArr(arr){
+    return arr.slice(3)
+}
+splitArr(myArr)
+
+
+
+// Todo: Write a function that takes a array (a) as argument
+// Remove the first 3 characters of a
+// Return the result
+var myString= "abcdefghajk"
+function splitString(str){
+    return str.split("")
+}
+
+console.log(splitString(myString));
+
+
 // Todo: Complete the method/function so that it converts dash/underscore delimited words into camel casing.
 //     The first word within the output should be capitalized only if the original word was capitalized
+function toCamelCase(str) {
+   return str.split('_').map([0]).toUpperCase()
+}
