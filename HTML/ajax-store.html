@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+<button id= #button1 >Press me!!</button>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    (function() {
+        "use strict";
+        // TODO: Create an AJAX GET request for the file under data/inventory.json
+        //use GET for shorthand
+        //put in URL for location to request
+        //use the done method to insure that the page is done loading
+        //use the peramater (product) as a place holder
+        //console.log products to insure that the data being retrieved to the data needed
+
+        $.get('/data/inventory.json').done(function(tools){
+            console.log(tools)
+        //the following object was returned!!!!!!!!
+        //  //{
+        //     "title": "Drill",
+        //         "quantity": 5,
+        //         "categories": [
+        //         "tool",
+        //         "powered"
+        //     ],
+        //         "price": 100
+        // }
+        //
+            // TODO: Take the data from inventory.json and append it to the products table
+            //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+            //             its contents and fields
+            //       HINT: You will want to target #insertProducts for your new HTML elements
+            //1. We will take our parameter of tools and create a for each loop to loop through
+            //2. then create a callback function with the parameter tool (singular)
+            //3. next creat variables for each category of data that will be inserted in the html.
+            //4. concatenate the element tags, tool parameter.the category of data that is being wanted.
+            //5. turn all categories into a string and save it to a variable.
+            //6. us jquery to append the the created variables for each product to the #insertProducts ID
+            tools.forEach(function(tool){
+                var productTitle = '<td>' + tool.title + "</td>"
+                var productQuantity = '<td>' + tool.quantity + "</td>"
+                var productPrice = '<td>' + tool.price + "</td>"
+                var productCategories = '<td>' + tool.categories.toString() + "</td>"
+                $("#insertProducts").append('<tr>' + productTitle + productQuantity + productPrice + productCategories+ '</tr>')
+            });
+        });
+        //next create a button called button1 in HTML and give it a click function.
+        //use the location property "a reference to a Location object; it represents the current URL of the document being displayed in that window"
+        //and attach the reload method on it. "The reload() method reloads the current document"
+        $('#button1').click(function (){
+            location.reload();
+        })
+    })();
+</script>
+
+</body>
+</html>
+
