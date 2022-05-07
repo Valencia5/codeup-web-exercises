@@ -496,9 +496,56 @@ function splitString(str){
 
 console.log(splitString(myString));
 
+// TODO: Write a function that takes an object (a) as argument
+// Return an array with all object keys
+    var myObj= {a:1,b:2,c:3}
+function toArr(obj) {
+        return Object.keys(obj)
+    }
 
-// Todo: Complete the method/function so that it converts dash/underscore delimited words into camel casing.
-//     The first word within the output should be capitalized only if the original word was capitalized
-function toCamelCase(str) {
-   return str.split('_').map([0]).toUpperCase()
+console.log(toArr(myObj));
+
+
+// TODO: Write a function that takes an object (a) as argument
+// // Return an array with all object values
+function toVal(obj) {
+    return Object.values(obj)
+}
+
+console.log(toVal(myObj));
+
+//TODO: Write a function that takes an array of numbers and returns the sum of the numbers.
+// The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
+
+function sum (numbers) {
+    "use strict";
+    var total= 0;
+    for (var i = 0; i < numbers.length; i++){
+        total += numbers [i];
+    }
+    return total;
+};
+
+//TODO: turn RDNA into RDNU
+//Replace all the "A" in a  string with "U"
+function DNAtoRNA(dna) {
+    // create a function which returns an RNA sequence from the given DNA sequence
+     var newString = dna.replaceAll('t','u');
+     return newString
+
+}
+
+//todo: Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total.
+// Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
+//
+// Write a code that gives out the total amount for different days(d).
+function rentalCarCost(d) {
+    // Your solution here
+    if (d < 3){
+        return d * 40
+    } else if (d >= 3 && d < 7){
+        return d * 40 - 20
+    }else if (d >= 7){
+        return d * 40 - 50
+    }
 }
