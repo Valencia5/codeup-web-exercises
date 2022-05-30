@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax-blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<div id="posts"></div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+//Use Ajax to load the contents of blog.json and add the data from it to your #posts div.
+$.get('/data/blog.json').done(function (blogs) {
+    console.log(blogs)
+    blogs.forEach(function(post){
+        var postTitle = '<h1>' + post.title + "</h1>"
+        var postContent = '<p>' + post.content + "</p>"
+        var postCategories = '<p>' + post.categories.toString() + "</p>"
+        var postDate = '<p>' + post.date + "</p>"
+        $("#posts").append(postTitle + postContent + postCategories + postDate)
+    })
+})
+//Add additional entries to blog.json and make sure your changes are reflected on the page.
+</script>
+</body>
+</html>
