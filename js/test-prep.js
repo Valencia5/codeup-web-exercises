@@ -549,3 +549,19 @@ function rentalCarCost(d) {
         return d * 40 - 50
     }
 }
+
+// todo: Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+//
+//     Return your answer as a number.
+function sumMix(x){
+    let result = 0;
+    for (let n of x) {
+        result += parseInt(n);
+    }
+    return result;
+}
+
+///or refactored it is
+function sumMix(x){
+    return x.map(a => +a).reduce((a, b) => a + b);
+}

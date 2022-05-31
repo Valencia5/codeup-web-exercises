@@ -57,6 +57,34 @@
 
 <button id=fact-button type="button">See Facts</button>
 
+<h3 >Yellowstone</h3>
+<ul>
+    <li>Encompasses 3,472 square miles</li>
+    <li>There are more than 10,000 hydrothermal features</li>
+    <li>Is home to more than 500 active geysers</li>
+    <li>Yellowstone has more than 1800 archaeological sites</li>
+</ul>
+<h3 >Grand Canyon</h3>
+<ul>
+    <li>bigger than the entire state of Rhode Island</li>
+    <li>The Hopi Tribe considers the Grand Canyon a gateway to the afterlife</li>
+    <li>The canyon is full of hidden caves</li>
+    <li>Grand Canyon is considered one of the finest examples of arid-land erosion in the world.</li>
+</ul>
+<h3 >Sequoia National Park</h3>
+<ul>
+    <li>Sequoia was the first park created to protect a living organism</li>
+    <li>Sequoia is home to the tallest mountain in the lower 48</li>
+    <li>General Sherman tree, the largest tree on Earth by volume</li>
+    <li>The Park Has Three Distinct Climate Zones</li>
+</ul>
+
+<button class="yellow" type="button">See Facts</button>
+
+
+
+
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
@@ -111,8 +139,38 @@
         $('#fact10').toggleClass('highlighter')
     });
 
+    // Create a button that, when clicked, makes the last li in each ul have a yellow background.
+
+    $('.yellow').click(function () {
+        $('ul').each( function () {
+            $(this).children().first().css('background-color', 'yellow');
+        });
+    });
+
+    // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
+
+        $('h3').click(function () {
+            $(this).next().each( function () {
+                $(this).children().css('font-weight', 'bold');
+            })
+        })
 
 
+
+    // When any list item is clicked, first li of the parent ul should have a font color of blue.
+
+    $('li').click( function() {
+        $('ul').each( function (){
+            $(this).children().first().css('color','blue')
+        })
+    })
+
+    // $("#").click(function () {
+    //     $("li").each(function (index) {
+    //         if (index % 4 === 0)
+    //             $(this).css('background color, yellow')
+    //     })
+    // });
 
 
 

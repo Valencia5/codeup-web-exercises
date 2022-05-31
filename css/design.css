@@ -1,0 +1,111 @@
+body {
+    position: relative;
+    background: #f0f0f0;
+}
+.left-font{
+    font-family: Abel;
+
+}
+.small-balls {
+    box-sizing: content-box;
+    padding: 0;
+    width: 18px;
+    justify-content: center;
+    align-items: center;
+    height: 18px;
+    border-radius:50%;
+    font-family: Anton, sans-serif
+    margin: 3px;
+    display: flex;
+    font-size: 10px;
+}
+
+.big-img {
+    box-sizing: content-box;
+    border-radius: 8px;
+    width:214px;
+    border: 6px solid #E6E6E6;
+}
+.red {
+    background: #E6563B;
+}
+.orange {
+    background: #EB9D3A;
+}
+.aqua {
+    background: #00ABA9;
+}
+.green {
+    background: #7CB06C;
+}
+#ipad-group, #macbook-group, #man-group, #security-group {
+    box-sizing: content-box;
+    width: 226px;
+    padding: 0;
+    margin: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.last-group-items {
+    box-sizing: content-box;
+    width:250px;
+    height: 54px;
+    margin-bottom: 16px;
+}
+.small-text {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+}
+#macbook-group, #man-group, #security-group {
+    display: initial;
+}
+.pb-1 {
+    padding: 1px
+}
+
+@media (min-width: 992px) {
+    main {
+        width: 750px;
+    }
+
+    #macbook-group, #man-group, #security-group {
+        display: initial;
+    }
+}
+@media (min-width: 1200px) {
+
+    #macbook-group, #man-group, #security-group {
+        display: initial;
+    }
+    .hide{
+        width: 20px;
+
+}
+
+@media (min-width:768px) {
+    .circles {
+        margin: 0 12px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    #macbook-group, #man-group, #security-group {
+        display: initial;
+    }
+
+    .last-group-items {
+        display: none;
+    }
+
+    .big-img {
+        box-sizing: content-box;
+        border-radius: 8px;
+        width: 214px;
+        border: 6px solid #E6E6E6;
+    }
+}
+
